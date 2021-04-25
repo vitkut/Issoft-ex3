@@ -33,6 +33,14 @@ public class Passenger extends User {
         return seat;
     }
 
+    public void setTrainNumber(String trainNumber) {
+        this.trainNumber = trainNumber;
+    }
+
+    public void setCarriageNumber(Integer carriageNumber) {
+        this.carriageNumber = carriageNumber;
+    }
+
     @Override
     public String toString() {
         return "Passenger{" +

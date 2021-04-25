@@ -38,6 +38,26 @@ public class Cargo {
         return owner;
     }
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
+
+    public void setDepartureAddress(String departureAddress) {
+        this.departureAddress = departureAddress;
+    }
+
+    public void setArrivalAddress(String arrivalAddress) {
+        this.arrivalAddress = arrivalAddress;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
     @Override
     public String toString() {
         return "Cargo{" +

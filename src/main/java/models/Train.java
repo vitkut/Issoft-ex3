@@ -1,6 +1,7 @@
 package models;
 
 import models.carriages.LocomotiveCarriage;
+import services.IdGenerator;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,9 +15,9 @@ public class Train {
     private String arrivalAddress;
     private LocomotiveCarriage mainLocomotive;
 
-    public Train(String trainNumber, Date departureTime,
+    public Train(Date departureTime,
                  Date arrivalTime, String departureAddress, String arrivalAddress, LocomotiveCarriage mainLocomotive) {
-        this.trainNumber = trainNumber;
+        this.trainNumber = IdGenerator.generateId(3);
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
         this.departureAddress = departureAddress;
@@ -46,6 +47,30 @@ public class Train {
 
     public LocomotiveCarriage getMainLocomotive() {
         return mainLocomotive;
+    }
+
+    public void setTrainNumber(String trainNumber) {
+        this.trainNumber = trainNumber;
+    }
+
+    public void setDepartureTime(Date departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public void setArrivalTime(Date arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public void setDepartureAddress(String departureAddress) {
+        this.departureAddress = departureAddress;
+    }
+
+    public void setArrivalAddress(String arrivalAddress) {
+        this.arrivalAddress = arrivalAddress;
+    }
+
+    public void setMainLocomotive(LocomotiveCarriage mainLocomotive) {
+        this.mainLocomotive = mainLocomotive;
     }
 
     @Override

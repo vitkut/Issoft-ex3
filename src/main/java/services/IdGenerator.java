@@ -1,8 +1,15 @@
 package services;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class IdGenerator {
 
+    private static final Logger logger = LoggerFactory.getLogger(IdGenerator.class);
+
     public static String generateId(int countOfSymb){
+        logger.debug("-Start generateId()");
+
         StringBuilder stringBuilder = new StringBuilder();
         for(int i = 0; i < countOfSymb; i++){
             double randNum = Math.random();//(0;1)
@@ -19,6 +26,10 @@ public class IdGenerator {
                 stringBuilder.append(num);
             }
         }
+
+        logger.debug("Id generated");
+        logger.debug("-Finish generateId()");
+
         return stringBuilder.toString();
     }
 }

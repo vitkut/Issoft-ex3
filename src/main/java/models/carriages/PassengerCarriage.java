@@ -12,7 +12,7 @@ public class PassengerCarriage extends Carriage {
     public PassengerCarriage(Integer seats) {
         super();
         this.seats = seats;
-        this.passengers = new ArrayList<Passenger>();
+        this.passengers = new ArrayList<>();
         for(int i = 0; i < seats; i++){
             passengers.add(null);
         }

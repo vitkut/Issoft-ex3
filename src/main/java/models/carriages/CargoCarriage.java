@@ -13,7 +13,7 @@ public class CargoCarriage extends Carriage {
     public CargoCarriage(Double carrying) {
         this.carrying = carrying;
         this.freeCarrying = carrying;
-        this.cargoes = new ArrayList<Cargo>();
+        this.cargoes = new ArrayList<>();
     }
 
     public Double getCarrying() {
@@ -24,7 +24,7 @@ public class CargoCarriage extends Carriage {
         return freeCarrying;
     }
 
-    public ArrayList<Cargo> getCargos() {
+    public ArrayList<Cargo> getCargoes() {
         return cargoes;
     }
 
